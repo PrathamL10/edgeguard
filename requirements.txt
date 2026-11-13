@@ -8,6 +8,7 @@ pillow
 scikit-learn
 matplotlib
 tqdm
+tabulate
 # Phase 5+ (export, quantization, benchmarking, webcam)
 onnx
 onnxscript
