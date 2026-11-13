@@ -1,0 +1,23 @@
+[
+  {
+    "name": "resnet18_driver",
+    "onnx": "models/resnet18_driver_fp32.onnx",
+    "size_mb": 44.72,
+    "parity_max_abs_diff": 1.9669532775878906e-06,
+    "parity_argmax_agreement": 1.0
+  },
+  {
+    "name": "mobilenetv3_small_driver",
+    "onnx": "models/mobilenetv3_small_driver_fp32.onnx",
+    "size_mb": 6.13,
+    "parity_max_abs_diff": 2.7418136596679688e-06,
+    "parity_argmax_agreement": 1.0
+  },
+  {
+    "name": "efficientnet_lite0_driver",
+    "onnx": "models/efficientnet_lite0_driver_fp32.onnx",
+    "size_mb": 13.49,
+    "parity_max_abs_diff": 2.9206275939941406e-06,
+    "parity_argmax_agreement": 1.0
+  }
+]
