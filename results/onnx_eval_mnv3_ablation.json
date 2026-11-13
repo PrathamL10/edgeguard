@@ -1,0 +1,105 @@
+{
+  "mobilenetv3_small_driver_fp32": {
+    "file": "models/mobilenetv3_small_driver_fp32.onnx",
+    "size_mb": 6.13,
+    "accuracy": 0.8264355923435075,
+    "macro_f1": 0.8356197328361537,
+    "phone_recall": 0.9173450219160927,
+    "phone_precision": 0.9439432989690721,
+    "per_class_recall": {
+      "safe driving": 0.6010498687664042,
+      "texting - right": 0.875,
+      "phone call - right": 0.8929440389294404,
+      "texting - left": 0.972972972972973,
+      "phone call - left": 0.9106699751861043,
+      "operating radio": 0.9515738498789347,
+      "drinking": 0.7731707317073171,
+      "reaching behind": 0.7177177177177178,
+      "hair and makeup": 0.7617647058823529,
+      "talking to passenger": 0.7627551020408163
+    }
+  },
+  "mobilenetv3_small_driver_int8": {
+    "file": "models/mobilenetv3_small_driver_int8.onnx",
+    "size_mb": 1.89,
+    "accuracy": 0.2033109156751164,
+    "macro_f1": 0.11891736423395027,
+    "phone_recall": 0.408891671884784,
+    "phone_precision": 0.712882096069869,
+    "per_class_recall": {
+      "safe driving": 0.005249343832020997,
+      "texting - right": 0.0398936170212766,
+      "phone call - right": 0.0,
+      "texting - left": 0.7862407862407862,
+      "phone call - left": 0.0,
+      "operating radio": 0.029055690072639227,
+      "drinking": 0.04390243902439024,
+      "reaching behind": 0.8048048048048048,
+      "hair and makeup": 0.0,
+      "talking to passenger": 0.3852040816326531
+    },
+    "agreement_with_fp32": 0.2754785307811692,
+    "accuracy_drop_vs_fp32": 0.6231246766683911,
+    "phone_recall_drop_vs_fp32": 0.5084533500313086
+  },
+  "mobilenetv3_small_driver_int8_convonly": {
+    "file": "models/mobilenetv3_small_driver_int8_convonly.onnx",
+    "size_mb": 1.87,
+    "accuracy": 0.1875323331608898,
+    "macro_f1": 0.11968936296925765,
+    "phone_recall": 0.2886662492172824,
+    "phone_precision": 0.7866894197952219,
+    "per_class_recall": {
+      "safe driving": 0.0,
+      "texting - right": 0.034574468085106384,
+      "phone call - right": 0.0,
+      "texting - left": 0.6805896805896806,
+      "phone call - left": 0.0,
+      "operating radio": 0.0774818401937046,
+      "drinking": 0.007317073170731708,
+      "reaching behind": 0.8708708708708709,
+      "hair and makeup": 0.011764705882352941,
+      "talking to passenger": 0.27040816326530615
+    }
+  },
+  "mobilenetv3_small_driver_int8_entropy": {
+    "file": "models/mobilenetv3_small_driver_int8_entropy.onnx",
+    "size_mb": 1.89,
+    "accuracy": 0.2033109156751164,
+    "macro_f1": 0.11891736423395027,
+    "phone_recall": 0.408891671884784,
+    "phone_precision": 0.712882096069869,
+    "per_class_recall": {
+      "safe driving": 0.005249343832020997,
+      "texting - right": 0.0398936170212766,
+      "phone call - right": 0.0,
+      "texting - left": 0.7862407862407862,
+      "phone call - left": 0.0,
+      "operating radio": 0.029055690072639227,
+      "drinking": 0.04390243902439024,
+      "reaching behind": 0.8048048048048048,
+      "hair and makeup": 0.0,
+      "talking to passenger": 0.3852040816326531
+    }
+  },
+  "mobilenetv3_small_driver_int8_pct": {
+    "file": "models/mobilenetv3_small_driver_int8_pct.onnx",
+    "size_mb": 1.89,
+    "accuracy": 0.1627004655975168,
+    "macro_f1": 0.11412013106264977,
+    "phone_recall": 0.1997495303694427,
+    "phone_precision": 0.7488262910798122,
+    "per_class_recall": {
+      "safe driving": 0.0,
+      "texting - right": 0.026595744680851064,
+      "phone call - right": 0.0,
+      "texting - left": 0.5675675675675675,
+      "phone call - left": 0.0,
+      "operating radio": 0.029055690072639227,
+      "drinking": 0.08536585365853659,
+      "reaching behind": 0.8588588588588588,
+      "hair and makeup": 0.023529411764705882,
+      "talking to passenger": 0.11989795918367346
+    }
+  }
+}

@@ -30,8 +30,12 @@ from data import build_raw_transform
 class ImageCalibrationReader(CalibrationDataReader):
     """Feeds calibration images one batch at a time, in the model's input format."""
 
-    def __init__(self, image_paths, img_size=224, batch_size=16):
-        self.paths = list(image_paths)
+    def __init__(self, image_paths, img_size=224, batch_size=20):
+        paths = list(image_paths)
+        # Every batch must be the same size: the histogram calibrators
+        # (percentile, entropy) stack batches and fail on a short last batch.
+        keep = len(paths) - len(paths) % batch_size if len(paths) >= batch_size else len(paths)
+        self.paths = paths[:keep]
         self.transform = build_raw_transform(img_size)
         self.batch_size = batch_size
         self.i = 0
@@ -50,10 +54,11 @@ class ImageCalibrationReader(CalibrationDataReader):
         self.i = 0
 
 
-def quantize_one(fp32_path: Path, calib_paths, method: str, img_size: int) -> Path:
+def quantize_one(fp32_path: Path, calib_paths, method: str, img_size: int,
+                 op_types=None, suffix: str = "") -> Path:
     stem = fp32_path.name.replace("_fp32.onnx", "")
     pre_path = fp32_path.with_name(f"{stem}_fp32_pre.onnx")
-    int8_path = fp32_path.with_name(f"{stem}_int8.onnx")
+    int8_path = fp32_path.with_name(f"{stem}_int8{suffix}.onnx")
 
     # Shape inference + graph cleanup first: ORT recommends this before quantizing.
     quant_pre_process(str(fp32_path), str(pre_path))
@@ -69,9 +74,14 @@ def quantize_one(fp32_path: Path, calib_paths, method: str, img_size: int) -> Pa
         calibrate_method={"minmax": CalibrationMethod.MinMax,
                           "percentile": CalibrationMethod.Percentile,
                           "entropy": CalibrationMethod.Entropy}[method],
+        # None = quantize every supported op. A list such as ["Conv", "Gemm"] keeps
+        # everything else (activations, squeeze-excite Mul/Add, pooling) in FP32:
+        # mixed precision, used when a few sensitive ops wreck accuracy.
+        op_types_to_quantize=op_types,
     )
     pre_path.unlink(missing_ok=True)
-    print(f"[{stem}] INT8 ({method}) -> {int8_path} "
+    scope = "all ops" if not op_types else "+".join(op_types) + " only"
+    print(f"[{stem}] INT8 ({method}, {scope}) -> {int8_path} "
           f"({fp32_path.stat().st_size / 1e6:.1f} MB -> {int8_path.stat().st_size / 1e6:.1f} MB)")
     return int8_path
 
@@ -84,6 +94,9 @@ def main():
     p.add_argument("--img-size", type=int, default=224)
     p.add_argument("--method", choices=["minmax", "percentile", "entropy"], default="minmax",
                    help="how activation ranges are chosen from calibration data")
+    p.add_argument("--op-types", nargs="+", default=None,
+                   help="quantize only these op types, e.g. --op-types Conv Gemm (default: all supported ops)")
+    p.add_argument("--suffix", default="", help="added to the output name, e.g. _pct -> *_int8_pct.onnx")
     args = p.parse_args()
 
     data_dir = Path(args.data_dir)
@@ -94,7 +107,7 @@ def main():
     print(f"Calibrating on {len(calib_paths)} train-driver images, method={args.method}")
 
     for m in args.models:
-        quantize_one(Path(m), calib_paths, args.method, args.img_size)
+        quantize_one(Path(m), calib_paths, args.method, args.img_size, args.op_types, args.suffix)
 
 
 if __name__ == "__main__":
