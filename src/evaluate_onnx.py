@@ -71,8 +71,8 @@ def main():
     # INT8 vs its FP32 parent: accuracy drop and prediction agreement.
     print()
     for name in results:
-        if name.endswith("_int8"):
-            parent = name.replace("_int8", "_fp32")
+        if "_int8" in name:  # e.g. *_int8, *_int8_pct, *_int8_convonly
+            parent = name.split("_int8")[0] + "_fp32"
             if parent in results:
                 agree = float((preds_by_name[name] == preds_by_name[parent]).mean())
                 drop = results[parent]["accuracy"] - results[name]["accuracy"]

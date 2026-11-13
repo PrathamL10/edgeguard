@@ -60,7 +60,10 @@
       "reaching behind": 0.8708708708708709,
       "hair and makeup": 0.011764705882352941,
       "talking to passenger": 0.27040816326530615
-    }
+    },
+    "agreement_with_fp32": 0.22995344024831868,
+    "accuracy_drop_vs_fp32": 0.6389032591826177,
+    "phone_recall_drop_vs_fp32": 0.6286787726988103
   },
   "mobilenetv3_small_driver_int8_entropy": {
     "file": "models/mobilenetv3_small_driver_int8_entropy.onnx",
@@ -80,7 +83,10 @@
       "reaching behind": 0.8048048048048048,
       "hair and makeup": 0.0,
       "talking to passenger": 0.3852040816326531
-    }
+    },
+    "agreement_with_fp32": 0.2754785307811692,
+    "accuracy_drop_vs_fp32": 0.6231246766683911,
+    "phone_recall_drop_vs_fp32": 0.5084533500313086
   },
   "mobilenetv3_small_driver_int8_pct": {
     "file": "models/mobilenetv3_small_driver_int8_pct.onnx",
@@ -100,6 +106,9 @@
       "reaching behind": 0.8588588588588588,
       "hair and makeup": 0.023529411764705882,
       "talking to passenger": 0.11989795918367346
-    }
+    },
+    "agreement_with_fp32": 0.19606828763579928,
+    "accuracy_drop_vs_fp32": 0.6637351267459907,
+    "phone_recall_drop_vs_fp32": 0.71759549154665
   }
 }

@@ -1,0 +1,76 @@
+{
+  "host": {
+    "cpu": "Apple M1",
+    "machine": "arm64",
+    "os": "Darwin 25.6.0",
+    "python": "3.12.16",
+    "onnxruntime": "1.32.0"
+  },
+  "results": [
+    {
+      "model": "mobilenetv3_small_driver_fp32",
+      "threads": 1,
+      "size_mb": 6.13,
+      "p50_ms": 5.258,
+      "p95_ms": 5.923,
+      "mean_ms": 5.422,
+      "fps_at_p50": 190.2,
+      "load_ms": 9.1,
+      "peak_rss_mb": 79.8,
+      "peak_rss_delta_mb": 31.9,
+      "runs": 300
+    },
+    {
+      "model": "mobilenetv3_small_driver_int8",
+      "threads": 1,
+      "size_mb": 1.89,
+      "p50_ms": 1.665,
+      "p95_ms": 2.299,
+      "mean_ms": 1.963,
+      "fps_at_p50": 600.5,
+      "load_ms": 22.8,
+      "peak_rss_mb": 73.8,
+      "peak_rss_delta_mb": 25.8,
+      "runs": 300
+    },
+    {
+      "model": "mobilenetv3_small_driver_int8_convonly",
+      "threads": 1,
+      "size_mb": 1.87,
+      "p50_ms": 1.893,
+      "p95_ms": 2.025,
+      "mean_ms": 1.916,
+      "fps_at_p50": 528.3,
+      "load_ms": 24.8,
+      "peak_rss_mb": 76.4,
+      "peak_rss_delta_mb": 28.2,
+      "runs": 300
+    },
+    {
+      "model": "mobilenetv3_small_driver_int8_entropy",
+      "threads": 1,
+      "size_mb": 1.89,
+      "p50_ms": 1.663,
+      "p95_ms": 1.794,
+      "mean_ms": 1.694,
+      "fps_at_p50": 601.3,
+      "load_ms": 22.2,
+      "peak_rss_mb": 73.4,
+      "peak_rss_delta_mb": 25.3,
+      "runs": 300
+    },
+    {
+      "model": "mobilenetv3_small_driver_int8_pct",
+      "threads": 1,
+      "size_mb": 1.89,
+      "p50_ms": 1.665,
+      "p95_ms": 2.071,
+      "mean_ms": 1.763,
+      "fps_at_p50": 600.5,
+      "load_ms": 23.2,
+      "peak_rss_mb": 73.5,
+      "peak_rss_delta_mb": 25.4,
+      "runs": 300
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+order,node,tensor,op_type,local_sqnr_db,cumulative_sqnr_db
+1,/Div,/Div_output_0,Div,48.52,48.52
+2,/model/features/features.0/features.0.0/Conv,/model/features/features.0/features.0.0/Conv_output_0,Conv,20.29,18.41
+3,"(unnamed, output _inlfunc_HardSwish_HS_X)",_inlfunc_HardSwish_HS_X,HardSigmoid,56.32,22.63
+4,"(unnamed, output /model/features/features.0/features.0.2/HardSwish_output_0)",/model/features/features.0/features.0.2/HardSwish_output_0,Mul,28.2,16.1
+6,/model/features/features.1/block/block.0/block.0.2/Relu,/model/features/features.1/block/block.0/block.0.2/Relu_output_0,Relu,4.7,3.57
+7,/model/features/features.1/block/block.1/avgpool/GlobalAveragePool,/model/features/features.1/block/block.1/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,52.17,15.4
+9,/model/features/features.1/block/block.1/activation/Relu,/model/features/features.1/block/block.1/activation/Relu_output_0,Relu,0.0,0.0
+10,/model/features/features.1/block/block.1/fc2/Conv,/model/features/features.1/block/block.1/fc2/Conv_output_0,Conv,47.14,47.13
+11,/model/features/features.1/block/block.1/scale_activation/HardSigmoid,/model/features/features.1/block/block.1/scale_activation/HardSigmoid_output_0,HardSigmoid,56.08,54.78
+12,/model/features/features.1/block/block.1/Mul,/model/features/features.1/block/block.1/Mul_output_0,Mul,25.31,5.92
+13,/model/features/features.1/block/block.2/block.2.0/Conv,/model/features/features.1/block/block.2/block.2.0/Conv_output_0,Conv,17.7,-2.78
+15,/model/features/features.2/block/block.0/block.0.2/Relu,/model/features/features.2/block/block.0/block.0.2/Relu_output_0,Relu,2.68,0.41
+17,/model/features/features.2/block/block.1/block.1.2/Relu,/model/features/features.2/block/block.1/block.1.2/Relu_output_0,Relu,2.15,2.42
+18,/model/features/features.2/block/block.2/block.2.0/Conv,/model/features/features.2/block/block.2/block.2.0/Conv_output_0,Conv,26.59,-2.05
+20,/model/features/features.3/block/block.0/block.0.2/Relu,/model/features/features.3/block/block.0/block.0.2/Relu_output_0,Relu,2.17,4.83
+22,/model/features/features.3/block/block.1/block.1.2/Relu,/model/features/features.3/block/block.1/block.1.2/Relu_output_0,Relu,2.86,6.84
+23,/model/features/features.3/block/block.2/block.2.0/Conv,/model/features/features.3/block/block.2/block.2.0/Conv_output_0,Conv,33.91,0.22
+24,/model/features/features.3/Add,/model/features/features.3/Add_output_0,Add,35.94,-1.48
+25,/model/features/features.4/block/block.0/block.0.0/Conv,/model/features/features.4/block/block.0/block.0.0/Conv_output_0,Conv,33.8,0.73
+26,"(unnamed, output _inlfunc_HardSwish_token_0_HS_X)",_inlfunc_HardSwish_token_0_HS_X,HardSigmoid,54.05,9.04
+27,"(unnamed, output /model/features/features.4/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.4/block/block.0/block.0.2/HardSwish_output_0,Mul,36.95,1.12
+28,/model/features/features.4/block/block.1/block.1.0/Conv,/model/features/features.4/block/block.1/block.1.0/Conv_output_0,Conv,35.25,3.79
+29,"(unnamed, output _inlfunc_HardSwish_token_1_HS_X)",_inlfunc_HardSwish_token_1_HS_X,HardSigmoid,54.82,12.24
+30,"(unnamed, output /model/features/features.4/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.4/block/block.1/block.1.2/HardSwish_output_0,Mul,39.73,4.65
+31,/model/features/features.4/block/block.2/avgpool/GlobalAveragePool,/model/features/features.4/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,37.79,8.73
+33,/model/features/features.4/block/block.2/activation/Relu,/model/features/features.4/block/block.2/activation/Relu_output_0,Relu,0.0,0.0
+34,/model/features/features.4/block/block.2/fc2/Conv,/model/features/features.4/block/block.2/fc2/Conv_output_0,Conv,45.46,44.91
+35,/model/features/features.4/block/block.2/scale_activation/HardSigmoid,/model/features/features.4/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,56.57,54.74
+36,/model/features/features.4/block/block.2/Mul,/model/features/features.4/block/block.2/Mul_output_0,Mul,42.92,5.05
+37,/model/features/features.4/block/block.3/block.3.0/Conv,/model/features/features.4/block/block.3/block.3.0/Conv_output_0,Conv,38.91,-2.15
+38,/model/features/features.5/block/block.0/block.0.0/Conv,/model/features/features.5/block/block.0/block.0.0/Conv_output_0,Conv,32.4,1.09
+39,"(unnamed, output _inlfunc_HardSwish_token_2_HS_X)",_inlfunc_HardSwish_token_2_HS_X,HardSigmoid,52.55,13.15
+40,"(unnamed, output /model/features/features.5/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.5/block/block.0/block.0.2/HardSwish_output_0,Mul,31.5,0.05
+41,/model/features/features.5/block/block.1/block.1.0/Conv,/model/features/features.5/block/block.1/block.1.0/Conv_output_0,Conv,32.5,0.52
+42,"(unnamed, output _inlfunc_HardSwish_token_3_HS_X)",_inlfunc_HardSwish_token_3_HS_X,HardSigmoid,52.71,8.59
+43,"(unnamed, output /model/features/features.5/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.5/block/block.1/block.1.2/HardSwish_output_0,Mul,29.27,-1.97
+44,/model/features/features.5/block/block.2/avgpool/GlobalAveragePool,/model/features/features.5/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,17.73,-0.5
+46,/model/features/features.5/block/block.2/activation/Relu,/model/features/features.5/block/block.2/activation/Relu_output_0,Relu,3.59,3.31
+47,/model/features/features.5/block/block.2/fc2/Conv,/model/features/features.5/block/block.2/fc2/Conv_output_0,Conv,36.38,10.9
+48,/model/features/features.5/block/block.2/scale_activation/HardSigmoid,/model/features/features.5/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,51.27,12.39
+49,/model/features/features.5/block/block.2/Mul,/model/features/features.5/block/block.2/Mul_output_0,Mul,31.7,2.25
+50,/model/features/features.5/block/block.3/block.3.0/Conv,/model/features/features.5/block/block.3/block.3.0/Conv_output_0,Conv,35.37,-0.79
+51,/model/features/features.5/Add,/model/features/features.5/Add_output_0,Add,38.93,-1.35
+52,/model/features/features.6/block/block.0/block.0.0/Conv,/model/features/features.6/block/block.0/block.0.0/Conv_output_0,Conv,33.48,1.9
+53,"(unnamed, output _inlfunc_HardSwish_token_4_HS_X)",_inlfunc_HardSwish_token_4_HS_X,HardSigmoid,52.48,14.18
+54,"(unnamed, output /model/features/features.6/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.6/block/block.0/block.0.2/HardSwish_output_0,Mul,31.12,1.25
+55,/model/features/features.6/block/block.1/block.1.0/Conv,/model/features/features.6/block/block.1/block.1.0/Conv_output_0,Conv,31.81,0.76
+56,"(unnamed, output _inlfunc_HardSwish_token_5_HS_X)",_inlfunc_HardSwish_token_5_HS_X,HardSigmoid,52.48,9.08
+57,"(unnamed, output /model/features/features.6/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.6/block/block.1/block.1.2/HardSwish_output_0,Mul,30.35,-0.73
+58,/model/features/features.6/block/block.2/avgpool/GlobalAveragePool,/model/features/features.6/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,12.01,0.36
+60,/model/features/features.6/block/block.2/activation/Relu,/model/features/features.6/block/block.2/activation/Relu_output_0,Relu,8.77,3.5
+61,/model/features/features.6/block/block.2/fc2/Conv,/model/features/features.6/block/block.2/fc2/Conv_output_0,Conv,43.69,11.94
+62,/model/features/features.6/block/block.2/scale_activation/HardSigmoid,/model/features/features.6/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,50.61,13.51
+63,/model/features/features.6/block/block.2/Mul,/model/features/features.6/block/block.2/Mul_output_0,Mul,32.25,0.35
+64,/model/features/features.6/block/block.3/block.3.0/Conv,/model/features/features.6/block/block.3/block.3.0/Conv_output_0,Conv,34.73,-1.11
+65,/model/features/features.6/Add,/model/features/features.6/Add_output_0,Add,37.81,-0.99
+66,/model/features/features.7/block/block.0/block.0.0/Conv,/model/features/features.7/block/block.0/block.0.0/Conv_output_0,Conv,32.21,1.5
+67,"(unnamed, output _inlfunc_HardSwish_token_6_HS_X)",_inlfunc_HardSwish_token_6_HS_X,HardSigmoid,52.76,12.2
+68,"(unnamed, output /model/features/features.7/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.7/block/block.0/block.0.2/HardSwish_output_0,Mul,34.45,2.22
+69,/model/features/features.7/block/block.1/block.1.0/Conv,/model/features/features.7/block/block.1/block.1.0/Conv_output_0,Conv,30.96,2.24
+70,"(unnamed, output _inlfunc_HardSwish_token_7_HS_X)",_inlfunc_HardSwish_token_7_HS_X,HardSigmoid,54.27,12.08
+71,"(unnamed, output /model/features/features.7/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.7/block/block.1/block.1.2/HardSwish_output_0,Mul,32.44,2.36
+72,/model/features/features.7/block/block.2/avgpool/GlobalAveragePool,/model/features/features.7/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,44.43,8.23
+74,/model/features/features.7/block/block.2/activation/Relu,/model/features/features.7/block/block.2/activation/Relu_output_0,Relu,7.4,15.98
+75,/model/features/features.7/block/block.2/fc2/Conv,/model/features/features.7/block/block.2/fc2/Conv_output_0,Conv,48.84,21.41
+76,/model/features/features.7/block/block.2/scale_activation/HardSigmoid,/model/features/features.7/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,58.84,27.91
+77,/model/features/features.7/block/block.2/Mul,/model/features/features.7/block/block.2/Mul_output_0,Mul,34.62,3.7
+78,/model/features/features.7/block/block.3/block.3.0/Conv,/model/features/features.7/block/block.3/block.3.0/Conv_output_0,Conv,36.28,-0.34
+79,/model/features/features.8/block/block.0/block.0.0/Conv,/model/features/features.8/block/block.0/block.0.0/Conv_output_0,Conv,33.59,1.95
+80,"(unnamed, output _inlfunc_HardSwish_token_8_HS_X)",_inlfunc_HardSwish_token_8_HS_X,HardSigmoid,52.62,14.73
+81,"(unnamed, output /model/features/features.8/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.8/block/block.0/block.0.2/HardSwish_output_0,Mul,30.81,1.04
+82,/model/features/features.8/block/block.1/block.1.0/Conv,/model/features/features.8/block/block.1/block.1.0/Conv_output_0,Conv,32.83,1.51
+83,"(unnamed, output _inlfunc_HardSwish_token_9_HS_X)",_inlfunc_HardSwish_token_9_HS_X,HardSigmoid,52.81,10.58
+84,"(unnamed, output /model/features/features.8/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.8/block/block.1/block.1.2/HardSwish_output_0,Mul,29.35,0.17
+85,/model/features/features.8/block/block.2/avgpool/GlobalAveragePool,/model/features/features.8/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,35.02,2.78
+87,/model/features/features.8/block/block.2/activation/Relu,/model/features/features.8/block/block.2/activation/Relu_output_0,Relu,11.6,7.12
+88,/model/features/features.8/block/block.2/fc2/Conv,/model/features/features.8/block/block.2/fc2/Conv_output_0,Conv,45.57,16.55
+89,/model/features/features.8/block/block.2/scale_activation/HardSigmoid,/model/features/features.8/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,50.82,18.55
+90,/model/features/features.8/block/block.2/Mul,/model/features/features.8/block/block.2/Mul_output_0,Mul,34.61,1.31
+91,/model/features/features.8/block/block.3/block.3.0/Conv,/model/features/features.8/block/block.3/block.3.0/Conv_output_0,Conv,33.54,-0.7
+92,/model/features/features.8/Add,/model/features/features.8/Add_output_0,Add,37.19,-0.49
+93,/model/features/features.9/block/block.0/block.0.0/Conv,/model/features/features.9/block/block.0/block.0.0/Conv_output_0,Conv,35.57,3.22
+94,"(unnamed, output _inlfunc_HardSwish_token_10_HS_X)",_inlfunc_HardSwish_token_10_HS_X,HardSigmoid,50.68,9.53
+95,"(unnamed, output /model/features/features.9/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.9/block/block.0/block.0.2/HardSwish_output_0,Mul,30.52,1.12
+96,/model/features/features.9/block/block.1/block.1.0/Conv,/model/features/features.9/block/block.1/block.1.0/Conv_output_0,Conv,31.2,1.77
+97,"(unnamed, output _inlfunc_HardSwish_token_11_HS_X)",_inlfunc_HardSwish_token_11_HS_X,HardSigmoid,53.81,14.01
+98,"(unnamed, output /model/features/features.9/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.9/block/block.1/block.1.2/HardSwish_output_0,Mul,33.32,1.11
+99,/model/features/features.9/block/block.2/avgpool/GlobalAveragePool,/model/features/features.9/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,23.45,3.96
+101,/model/features/features.9/block/block.2/activation/Relu,/model/features/features.9/block/block.2/activation/Relu_output_0,Relu,4.25,4.07
+102,/model/features/features.9/block/block.2/fc2/Conv,/model/features/features.9/block/block.2/fc2/Conv_output_0,Conv,31.51,9.7
+103,/model/features/features.9/block/block.2/scale_activation/HardSigmoid,/model/features/features.9/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,51.99,15.82
+104,/model/features/features.9/block/block.2/Mul,/model/features/features.9/block/block.2/Mul_output_0,Mul,33.0,2.72
+105,/model/features/features.9/block/block.3/block.3.0/Conv,/model/features/features.9/block/block.3/block.3.0/Conv_output_0,Conv,34.43,-0.69
+106,/model/features/features.10/block/block.0/block.0.0/Conv,/model/features/features.10/block/block.0/block.0.0/Conv_output_0,Conv,30.55,1.57
+107,"(unnamed, output _inlfunc_HardSwish_token_12_HS_X)",_inlfunc_HardSwish_token_12_HS_X,HardSigmoid,52.24,15.3
+108,"(unnamed, output /model/features/features.10/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.10/block/block.0/block.0.2/HardSwish_output_0,Mul,27.88,0.92
+109,/model/features/features.10/block/block.1/block.1.0/Conv,/model/features/features.10/block/block.1/block.1.0/Conv_output_0,Conv,29.86,0.69
+110,"(unnamed, output _inlfunc_HardSwish_token_13_HS_X)",_inlfunc_HardSwish_token_13_HS_X,HardSigmoid,52.37,10.02
+111,"(unnamed, output /model/features/features.10/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.10/block/block.1/block.1.2/HardSwish_output_0,Mul,25.54,0.02
+112,/model/features/features.10/block/block.2/avgpool/GlobalAveragePool,/model/features/features.10/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,42.07,-2.09
+114,/model/features/features.10/block/block.2/activation/Relu,/model/features/features.10/block/block.2/activation/Relu_output_0,Relu,3.65,3.56
+115,/model/features/features.10/block/block.2/fc2/Conv,/model/features/features.10/block/block.2/fc2/Conv_output_0,Conv,45.15,14.66
+116,/model/features/features.10/block/block.2/scale_activation/HardSigmoid,/model/features/features.10/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,46.96,11.91
+117,/model/features/features.10/block/block.2/Mul,/model/features/features.10/block/block.2/Mul_output_0,Mul,24.87,0.84
+118,/model/features/features.10/block/block.3/block.3.0/Conv,/model/features/features.10/block/block.3/block.3.0/Conv_output_0,Conv,31.04,-0.65
+119,/model/features/features.10/Add,/model/features/features.10/Add_output_0,Add,33.72,-0.58
+120,/model/features/features.11/block/block.0/block.0.0/Conv,/model/features/features.11/block/block.0/block.0.0/Conv_output_0,Conv,33.22,2.99
+121,"(unnamed, output _inlfunc_HardSwish_token_14_HS_X)",_inlfunc_HardSwish_token_14_HS_X,HardSigmoid,51.19,11.62
+122,"(unnamed, output /model/features/features.11/block/block.0/block.0.2/HardSwish_output_0)",/model/features/features.11/block/block.0/block.0.2/HardSwish_output_0,Mul,29.28,1.62
+123,/model/features/features.11/block/block.1/block.1.0/Conv,/model/features/features.11/block/block.1/block.1.0/Conv_output_0,Conv,28.75,0.51
+124,"(unnamed, output _inlfunc_HardSwish_token_15_HS_X)",_inlfunc_HardSwish_token_15_HS_X,HardSigmoid,52.12,10.81
+125,"(unnamed, output /model/features/features.11/block/block.1/block.1.2/HardSwish_output_0)",/model/features/features.11/block/block.1/block.1.2/HardSwish_output_0,Mul,26.43,0.28
+126,/model/features/features.11/block/block.2/avgpool/GlobalAveragePool,/model/features/features.11/block/block.2/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,37.16,-1.54
+128,/model/features/features.11/block/block.2/activation/Relu,/model/features/features.11/block/block.2/activation/Relu_output_0,Relu,3.03,2.71
+129,/model/features/features.11/block/block.2/fc2/Conv,/model/features/features.11/block/block.2/fc2/Conv_output_0,Conv,41.96,8.95
+130,/model/features/features.11/block/block.2/scale_activation/HardSigmoid,/model/features/features.11/block/block.2/scale_activation/HardSigmoid_output_0,HardSigmoid,43.36,2.69
+131,/model/features/features.11/block/block.2/Mul,/model/features/features.11/block/block.2/Mul_output_0,Mul,19.15,-0.54
+132,/model/features/features.11/block/block.3/block.3.0/Conv,/model/features/features.11/block/block.3/block.3.0/Conv_output_0,Conv,26.01,-0.92
+133,/model/features/features.11/Add,/model/features/features.11/Add_output_0,Add,27.99,-0.52
+134,/model/features/features.12/features.12.0/Conv,/model/features/features.12/features.12.0/Conv_output_0,Conv,27.42,0.78
+135,"(unnamed, output _inlfunc_HardSwish_token_16_HS_X)",_inlfunc_HardSwish_token_16_HS_X,HardSigmoid,52.39,2.12
+136,"(unnamed, output /model/features/features.12/features.12.2/HardSwish_output_0)",/model/features/features.12/features.12.2/HardSwish_output_0,Mul,26.18,-0.61
+137,/model/avgpool/GlobalAveragePool,/model/avgpool/GlobalAveragePool_output_0,GlobalAveragePool,40.24,-2.16
+138,/model/Flatten,/model/Flatten_output_0,Flatten,348.69,-2.16
+139,/model/classifier/classifier.0/Gemm,/model/classifier/classifier.0/Gemm_output_0,Gemm,36.71,-1.29
+140,"(unnamed, output _inlfunc_HardSwish_token_17_HS_X)",_inlfunc_HardSwish_token_17_HS_X,HardSigmoid,52.57,5.07
+141,"(unnamed, output /model/classifier/classifier.1/HardSwish_output_0)",/model/classifier/classifier.1/HardSwish_output_0,Mul,38.42,-3.28
+142,/model/classifier/classifier.3/Gemm,logits,Gemm,30.26,-0.36

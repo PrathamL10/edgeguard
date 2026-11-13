@@ -55,13 +55,22 @@ class ImageCalibrationReader(CalibrationDataReader):
 
 
 def quantize_one(fp32_path: Path, calib_paths, method: str, img_size: int,
-                 op_types=None, suffix: str = "") -> Path:
+                 op_types=None, suffix: str = "", exclude=None) -> Path:
     stem = fp32_path.name.replace("_fp32.onnx", "")
     pre_path = fp32_path.with_name(f"{stem}_fp32_pre.onnx")
     int8_path = fp32_path.with_name(f"{stem}_int8{suffix}.onnx")
 
     # Shape inference + graph cleanup first: ORT recommends this before quantizing.
     quant_pre_process(str(fp32_path), str(pre_path))
+
+    # Mixed precision by node: any node whose name contains one of the given
+    # substrings stays FP32 (e.g. a layer that quant_debug.py showed is breaking).
+    nodes_to_exclude = []
+    if exclude:
+        import onnx
+        names = [n.name for n in onnx.load(str(pre_path)).graph.node]
+        nodes_to_exclude = [n for n in names if any(sub in n for sub in exclude)]
+        print(f"  keeping {len(nodes_to_exclude)} node(s) in FP32: {nodes_to_exclude[:6]}{' ...' if len(nodes_to_exclude) > 6 else ''}")
 
     quantize_static(
         model_input=str(pre_path),
@@ -78,6 +87,7 @@ def quantize_one(fp32_path: Path, calib_paths, method: str, img_size: int,
         # everything else (activations, squeeze-excite Mul/Add, pooling) in FP32:
         # mixed precision, used when a few sensitive ops wreck accuracy.
         op_types_to_quantize=op_types,
+        nodes_to_exclude=nodes_to_exclude,
     )
     pre_path.unlink(missing_ok=True)
     scope = "all ops" if not op_types else "+".join(op_types) + " only"
@@ -96,6 +106,8 @@ def main():
                    help="how activation ranges are chosen from calibration data")
     p.add_argument("--op-types", nargs="+", default=None,
                    help="quantize only these op types, e.g. --op-types Conv Gemm (default: all supported ops)")
+    p.add_argument("--exclude-nodes", nargs="+", default=None,
+                   help="keep nodes whose name contains any of these substrings in FP32, e.g. features.1/")
     p.add_argument("--suffix", default="", help="added to the output name, e.g. _pct -> *_int8_pct.onnx")
     args = p.parse_args()
 
@@ -107,7 +119,7 @@ def main():
     print(f"Calibrating on {len(calib_paths)} train-driver images, method={args.method}")
 
     for m in args.models:
-        quantize_one(Path(m), calib_paths, args.method, args.img_size, args.op_types, args.suffix)
+        quantize_one(Path(m), calib_paths, args.method, args.img_size, args.op_types, args.suffix, args.exclude_nodes)
 
 
 if __name__ == "__main__":
