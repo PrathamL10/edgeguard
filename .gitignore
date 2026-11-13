@@ -1,6 +1,8 @@
 # Never commit the dataset (Kaggle competition terms) or large artifacts
 checkpoints/
 logs/
+eval_pack/
+models/
 data/
 data_*/
 fake_data/

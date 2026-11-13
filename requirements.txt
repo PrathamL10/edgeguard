@@ -1,18 +1,25 @@
-# Local (Mac) environment. Kaggle already has torch/torchvision/timm/sklearn/pandas/matplotlib.
-torch
-torchvision
-timm
-numpy
-pandas
-pillow
-scikit-learn
-matplotlib
-tqdm
-tabulate
-cleanlab
-# Phase 5+ (export, quantization, benchmarking, webcam)
-onnx
-onnxscript
-onnxruntime
-opencv-python
-psutil
+# Never commit the dataset (Kaggle competition terms) or large artifacts
+checkpoints/
+logs/
+eval_pack/
+models/
+data/
+data_*/
+fake_data/
+results_fake/
+imgs/
+*.zip
+*.pth
+*.pt
+*.onnx
+*.engine
+*.tflite
+# Python / env
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+# C++ build
+cpp/build/
+# macOS
+.DS_Store

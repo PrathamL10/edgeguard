@@ -70,6 +70,15 @@ def build_transforms(train: bool, img_size: int = 224, mean=IMAGENET_MEAN, std=I
     ])
 
 
+def build_raw_transform(img_size: int = 224):
+    """Preprocessing for the exported ONNX models: resize + scale to [0, 1].
+
+    Mean/std normalization is baked INTO the ONNX graph (see export_onnx.py),
+    so every runtime (Python, C++, TensorRT) only has to do this simple step.
+    """
+    return T.Compose([T.Resize((img_size, img_size)), T.ToTensor()])
+
+
 def load_splits(data_dir: str | Path) -> pd.DataFrame:
     return pd.read_csv(Path(data_dir) / "splits.csv")
 

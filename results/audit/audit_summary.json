@@ -1,0 +1,28 @@
+{
+  "checkpoint": "checkpoints/resnet18_driver.pth",
+  "audited_images": 7586,
+  "audited_drivers": [
+    "p021",
+    "p024",
+    "p049",
+    "p051",
+    "p052",
+    "p061",
+    "p064",
+    "p081"
+  ],
+  "flagged": 260,
+  "flagged_pct": 3.43,
+  "top_confusions_among_flags": {
+    "talking to passenger -> safe driving": 89,
+    "safe driving -> talking to passenger": 60,
+    "reaching behind -> talking to passenger": 30,
+    "phone call - right -> talking to passenger": 19,
+    "hair and makeup -> safe driving": 12,
+    "hair and makeup -> talking to passenger": 8,
+    "operating radio -> safe driving": 5,
+    "hair and makeup -> phone call - left": 4,
+    "drinking -> talking to passenger": 4,
+    "phone call - left -> talking to passenger": 4
+  }
+}
