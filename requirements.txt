@@ -9,6 +9,7 @@ scikit-learn
 matplotlib
 tqdm
 tabulate
+cleanlab
 # Phase 5+ (export, quantization, benchmarking, webcam)
 onnx
 onnxscript

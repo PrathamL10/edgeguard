@@ -1,4 +1,6 @@
 # Never commit the dataset (Kaggle competition terms) or large artifacts
+checkpoints/
+logs/
 data/
 data_*/
 fake_data/
@@ -11,10 +13,10 @@ imgs/
 *.engine
 *.tflite
 # Python / env
+.venv/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
-.venv
 # C++ build
 cpp/build/
 # macOS
