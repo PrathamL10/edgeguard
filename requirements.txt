@@ -1,0 +1,16 @@
+# Local (Mac) environment. Kaggle already has torch/torchvision/timm/sklearn/pandas/matplotlib.
+torch
+torchvision
+timm
+numpy
+pandas
+pillow
+scikit-learn
+matplotlib
+tqdm
+# Phase 5+ (export, quantization, benchmarking, webcam)
+onnx
+onnxscript
+onnxruntime
+opencv-python
+psutil
